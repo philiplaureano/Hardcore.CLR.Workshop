@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using ILRewriter;
+using ILRewriter.Extensions;
 using Mono.Cecil;
 
 namespace Tests

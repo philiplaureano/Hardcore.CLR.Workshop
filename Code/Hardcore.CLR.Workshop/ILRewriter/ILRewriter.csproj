@@ -56,11 +56,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyDefinitionExtensions.cs" />
+    <Compile Include="Extensions\AssemblyDefinitionExtensions.cs" />
     <Compile Include="IAssemblyModifier.cs" />
-    <Compile Include="ModuleDefinitionExtensions.cs" />
+    <Compile Include="Extensions\MethodDefinitionExtensions.cs" />
+    <Compile Include="Extensions\ModuleDefinitionExtensions.cs" />
+    <Compile Include="Extensions\ParameterDefinitionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleAssemblyModifier.cs" />
+    <Compile Include="Extensions\TypeDefinitionExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

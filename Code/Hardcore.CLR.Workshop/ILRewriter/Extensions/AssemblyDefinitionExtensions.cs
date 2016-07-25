@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Mono.Cecil;
 
-namespace ILRewriter
+namespace ILRewriter.Extensions
 {
     public static class AssemblyDefinitionExtensions
     {
@@ -14,7 +11,7 @@ namespace ILRewriter
             Assembly result = null;
             using (var stream = new MemoryStream())
             {
-                // Persist the assembly to the stream
+                // Persist the assembly to the stream and load it into memory
                 definition.Write(stream);
                 var buffer = stream.GetBuffer();
                 result = Assembly.Load(buffer);

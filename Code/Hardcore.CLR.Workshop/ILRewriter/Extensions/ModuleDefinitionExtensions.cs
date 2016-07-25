@@ -4,7 +4,7 @@ using System.Reflection;
 using Mono.Cecil;
 using TypeAttributes = Mono.Cecil.TypeAttributes;
 
-namespace ILRewriter
+namespace ILRewriter.Extensions
 {
     public static class ModuleDefinitionExtensions
     {

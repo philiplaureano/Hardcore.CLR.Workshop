@@ -14,6 +14,7 @@ namespace Tests
             var modifiedAssembly = RewriteAssemblyOf<SampleClassWithInstanceMethod>();
             var modifiedType = CreateModifiedType(modifiedAssembly, nameof(SampleClassWithInstanceMethod));
 
+            
             // Call the DoSomething() method
             // with the modified Console.WriteLine call
             modifiedType.DoSomething();
