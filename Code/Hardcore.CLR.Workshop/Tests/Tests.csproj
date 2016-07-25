@@ -68,6 +68,7 @@
     <Compile Include="BaseAssemblyVerificationTestFixture.cs" />
     <Compile Include="BaseCecilTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

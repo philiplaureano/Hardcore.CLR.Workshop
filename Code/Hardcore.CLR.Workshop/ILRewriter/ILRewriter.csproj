@@ -60,6 +60,7 @@
     <Compile Include="IAssemblyModifier.cs" />
     <Compile Include="ModuleDefinitionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleAssemblyModifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

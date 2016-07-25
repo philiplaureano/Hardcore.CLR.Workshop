@@ -42,6 +42,12 @@ namespace ILRewriter
             return module.Import(typeof (T).GetMethod(methodName));
         }
 
+        public static MethodReference ImportMethod(this ModuleDefinition module, string methodName, 
+            Type declaringType, params Type[] parameterTypes)
+        {
+            return module.Import(declaringType.GetMethod(methodName, parameterTypes));
+        }
+
         public static MethodReference ImportMethod<T>(this ModuleDefinition module, string methodName,
             params Type[] parameterTypes)
         {
