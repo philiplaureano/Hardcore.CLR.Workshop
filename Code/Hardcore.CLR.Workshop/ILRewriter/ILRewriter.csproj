@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="AssemblyDefinitionExtensions.cs" />
     <Compile Include="IAssemblyModifier.cs" />
+    <Compile Include="ModuleDefinitionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
