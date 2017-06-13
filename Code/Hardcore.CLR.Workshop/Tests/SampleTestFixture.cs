@@ -1,4 +1,8 @@
+using System;
+using System.IO;
 using ILRewriter;
+using ILRewriter.Extensions;
+using Mono.Cecil;
 using NUnit.Framework;
 using SampleLibrary;
 
@@ -14,7 +18,14 @@ namespace Tests
             var modifiedAssembly = RewriteAssemblyOf<SampleClassWithInstanceMethod>();
             var modifiedType = CreateModifiedType(modifiedAssembly, nameof(SampleClassWithInstanceMethod));
 
-            
+            var myStream = new MemoryStream();
+            modifiedAssembly.Write(myStream);
+
+            var targetFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "output.dll");
+            File.WriteAllBytes(targetFile, myStream.ToArray());
+
+            PEVerify(targetFile);
+
             // Call the DoSomething() method
             // with the modified Console.WriteLine call
             modifiedType.DoSomething();
@@ -22,7 +33,7 @@ namespace Tests
         }
         protected override IAssemblyModifier GetAssemblyModifier()
         {
-            return new SampleAssemblyModifier();
+            return new MethodCallInterceptionModifier();
         }
     }
 }
